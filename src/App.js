@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Mys from "./components/Mys.jsx";
-
+import Navbar from "./components/navbar.jsx";
+import "./App.css";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -12,9 +13,12 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Mys />
-      </div>
+      <React.Fragment>
+        <Navbar />
+        <main className="container">
+          <Mys />
+        </main>
+      </React.Fragment>
     );
   }
 }
